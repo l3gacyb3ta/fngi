@@ -1,0 +1,11 @@
+name: Build and run fngi tests.
+on: [push]
+jobs:
+  BuildAndTest:
+    runs-on: 
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - run: echo "Got latest fngi source."
+      - run: ./fngi --compile --test --syslog=LOG_COMPILER --log=LOG_INFO
+      - run: echo "finished."
