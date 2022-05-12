@@ -2,7 +2,7 @@ name: Build and run fngi tests.
 on: [push]
 jobs:
   BuildAndTest:
-    runs-on: 
+    runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
